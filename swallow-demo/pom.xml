@@ -10,17 +10,18 @@
         <relativePath>../swallow-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>swallow-app</artifactId>
+    <artifactId>swallow-demo</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>swallow-development</module>
-        <module>swallow-deployment</module>
-        <module>swallow-management</module>
+        <module>demo-manage</module>
+        <module>demo-portal</module>
+        <module>demo-gateway</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>cn.yxswallow</groupId>
-            <artifactId>swallow-protocols</artifactId>
-        </dependency>
-    </dependencies>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 </project>

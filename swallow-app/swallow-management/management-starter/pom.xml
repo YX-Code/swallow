@@ -5,15 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.yxswallow</groupId>
-        <artifactId>swallow-app</artifactId>
+        <artifactId>management-module</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>swallow-management</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>management-module</module>
-        <module>management-starter</module>
-    </modules>
 
+    <artifactId>management-starter</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>
