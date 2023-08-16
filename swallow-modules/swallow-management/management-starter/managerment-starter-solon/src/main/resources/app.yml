@@ -1,0 +1,50 @@
+solon.app:
+  name: swallow-management
+  group: management
+
+solon.output.meta: 1
+
+test:
+  db1:
+    schema: swallow
+    jdbcUrl: jdbc:mysql://rm-2ze3tc26ktkz12asijo.mysql.rds.aliyuncs.com :3308/swallow?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: swallow
+    password: Yao870218
+  db2:
+    schema: swallow
+    jdbcUrl: jdbc:mysql://rm-2ze3tc26ktkz12asijo.mysql.rds.aliyuncs.com :3308/swallow?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: swallow
+    password: Yao870218
+
+beetlsql.db1:
+  #  dev: true
+  dialect: "mysql" #快捷配置：方言
+  debug: true  #快捷配置：是否调试模式
+#  slaves: "db2,db3"  #快捷配置：从库配置
+#  nc: "org.wisecloud.common.db.beetlsql.JPANameConversion" #字段映射
+#  dbStyle: "org.beetl.sql.core.db.MySqlStyle" #字段映射：与 dialect 效果相同
+  inters: #字段映射
+    - "org.beetl.sql.ext.DebugInterceptor" #与 debug 效果相同
+#    - "org.beetl.sql.ext.Slf4JLogInterceptor"
+
+beetlsql.db2:
+  dialect: mysql
+  #  dev: true
+  interceptorList:
+    - "org.beetl.sql.ext.DebugInterceptor"
+      
+# 以下为默认值，可以都不加(支持"云端配置服务"进行配置，支持写到"云端日志服务")
+solon.logging.appender:
+  console:
+    level: TRACE #可根据需要调整级别
+  cloud:
+    level: INFO
+
+# 记录器级别的配置示例
+solon.logging.logger:
+  "root": #默认记录器配置
+    level: TRACE
+  "com.zaxxer.hikari":
+    level: WARN   

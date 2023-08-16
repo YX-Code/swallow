@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.yxswallow</groupId>
+        <artifactId>management-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>management-api-web-solon</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!-- 接口定义 -->
+        <dependency>
+            <groupId>cn.yxswallow</groupId>
+            <artifactId>management-api-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- WEB及IOC等技术实现 -->
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>solon-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>solon.logging.simple</artifactId>
+        </dependency>
+        <!-- 基础服务实现 -->
+        <dependency>
+            <groupId>cn.yxswallow</groupId>
+            <artifactId>management-infra-beetlsql</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 业务编排实现 -->
+        <dependency>
+            <groupId>cn.yxswallow</groupId>
+            <artifactId>management-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>beetlsql-solon-plugin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>solon-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

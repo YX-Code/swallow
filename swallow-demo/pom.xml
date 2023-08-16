@@ -13,9 +13,7 @@
     <artifactId>swallow-demo</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-manage</module>
-        <module>demo-portal</module>
-        <module>demo-gateway</module>
+        <module>demo-solon-api</module>
     </modules>
 
     <properties>

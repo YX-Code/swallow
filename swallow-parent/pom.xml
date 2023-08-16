@@ -25,9 +25,17 @@
         <mysql-connector.version>8.0.27</mysql-connector.version>
         <dubbo.version>3.2.1</dubbo.version>
         <swallow.version>1.0-SNAPSHOT</swallow.version>
+        
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.noear</groupId>
+                <artifactId>solon-parent</artifactId>
+                <version>2.4.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>cn.yxswallow</groupId>
                 <artifactId>swallow-protocols</artifactId>
@@ -113,6 +121,11 @@
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-registry-nacos</artifactId>
                 <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetlsql</artifactId>
+                <version>3.23.6-RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

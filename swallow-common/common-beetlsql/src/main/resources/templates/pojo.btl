@@ -1,0 +1,14 @@
+package ${package};
+<%for(impCls in imports){%>
+import ${impCls};
+<%}%>
+/*
+* ${comment}
+* gen by beetlsql3 ${date(),"yyyy-MM-dd"}
+*/
+
+@Table(name="${has(catalog)?(catalog+".")}${table}")
+public class ${className} {
+	<%include("pojoAttribute.btl"){}%>
+
+}

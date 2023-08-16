@@ -12,11 +12,7 @@
 
     <artifactId>swallow-app</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>swallow-development</module>
-        <module>swallow-deployment</module>
-        <module>swallow-management</module>
-    </modules>
+   
     <dependencies>
         <dependency>
             <groupId>cn.yxswallow</groupId>

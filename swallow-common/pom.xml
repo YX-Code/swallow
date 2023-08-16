@@ -11,6 +11,9 @@
     </parent>
     <artifactId>swallow-common</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>common-beetlsql</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>cn.yxswallow</groupId>

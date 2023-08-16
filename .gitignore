@@ -37,3 +37,4 @@ build/
 ### Mac OS ###
 .DS_Store
 /.idea/
+/swallow-modules/swallow-management/src/main/resources/rebel.xml
