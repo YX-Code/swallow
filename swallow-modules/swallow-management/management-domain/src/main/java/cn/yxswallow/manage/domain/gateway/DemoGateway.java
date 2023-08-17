@@ -1,9 +1,9 @@
 package cn.yxswallow.manage.domain.gateway;
 
-import cn.yxswallow.manage.domain.Department;
+import cn.yxswallow.manage.client.dto.form.SysDeptForm;
 
 import java.util.List;
 
 public interface DemoGateway {
-    List<Department> queryAll();
+    List<SysDeptForm> queryAll();
 }

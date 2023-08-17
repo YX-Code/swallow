@@ -12,7 +12,7 @@
     <artifactId>management-infra</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>management-infra-beetlsql</module>
+        <module>management-infra-datasource</module>
     </modules>
 
     <properties>
