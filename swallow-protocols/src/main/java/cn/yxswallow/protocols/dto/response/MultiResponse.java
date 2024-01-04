@@ -42,27 +42,14 @@ public class MultiResponse<T> extends Response {
         return !isEmpty();
     }
     
-    public static MultiResponse<Object> buildSuccess() {
-        MultiResponse<Object> response = new MultiResponse<>();
-        response.setSuccess(true);
-        return response;
-    }
     
-    public static MultiResponse<Object> buildFailure(String errCode, String errMessage) {
-        MultiResponse<Object> response = new MultiResponse<>();
-        response.setSuccess(false);
-        response.setCode(errCode);
-        response.setMessage(errMessage);
-        return response;
-    }
-    
-    public static <T> MultiResponse<T> success() {
+    public static <T> MultiResponse<T> buildSuccess() {
         MultiResponse<T> response = new MultiResponse<>();
         response.setSuccess(true);
         return response;
     }
     
-    public static <T> MultiResponse<T> failure(String errCode, String errMessage) {
+    public static <T> MultiResponse<T> buildFailure(String errCode, String errMessage) {
         MultiResponse<T> response = new MultiResponse<>();
         response.setSuccess(false);
         response.setCode(errCode);

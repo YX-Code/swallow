@@ -24,27 +24,14 @@ public class SingleResponse<T> extends Response {
     public void setData(T data) {
         this.data = data;
     }
-    public static <T> SingleResponse<T> success() {
+    public static <T> SingleResponse<T> buildSuccess() {
         SingleResponse<T> response = new SingleResponse<>();
         response.setSuccess(true);
         return response;
     }
 
-    public static <T> SingleResponse<T> failure(String errCode, String errMessage) {
+    public static <T> SingleResponse<T> buildFailure(String errCode, String errMessage) {
         SingleResponse<T> response = new SingleResponse<>();
-        response.setSuccess(false);
-        response.setCode(errCode);
-        response.setMessage(errMessage);
-        return response;
-    }
-    public static SingleResponse<?> buildSuccess() {
-        SingleResponse<?> response = new SingleResponse<>();
-        response.setSuccess(true);
-        return response;
-    }
-
-    public static SingleResponse buildFailure(String errCode, String errMessage) {
-        SingleResponse response = new SingleResponse();
         response.setSuccess(false);
         response.setCode(errCode);
         response.setMessage(errMessage);

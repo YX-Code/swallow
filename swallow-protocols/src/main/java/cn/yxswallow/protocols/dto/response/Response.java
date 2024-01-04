@@ -60,13 +60,13 @@ public class Response extends DTO {
         return "Response [success=" + success + ", code=" + code + ", message=" + message + "]";
     }
 
-    public static Response buildSuccess() {
+    public static Response success() {
         Response response = new Response();
         response.setSuccess(true);
         return response;
     }
 
-    public static Response buildFailure(String errCode, String errMessage) {
+    public static Response failure(String errCode, String errMessage) {
         Response response = new Response();
         response.setSuccess(false);
         response.setCode(errCode);

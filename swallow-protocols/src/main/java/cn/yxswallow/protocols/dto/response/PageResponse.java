@@ -88,26 +88,13 @@ public class PageResponse<T> extends Response {
         return !isEmpty();
     }
 
-    public static PageResponse buildSuccess() {
-        PageResponse response = new PageResponse();
-        response.setSuccess(true);
-        return response;
-    }
-
-    public static PageResponse buildFailure(String errCode, String errMessage) {
-        PageResponse response = new PageResponse();
-        response.setSuccess(false);
-        response.setCode(errCode);
-        response.setMessage(errMessage);
-        return response;
-    }
-    public static <T> PageResponse<T> success() {
+    public static <T> PageResponse<T> buildSuccess() {
         PageResponse<T> response = new PageResponse<>();
         response.setSuccess(true);
         return response;
     }
 
-    public static <T> PageResponse<T> failure(String errCode, String errMessage) {
+    public static <T> PageResponse<T> buildFailure(String errCode, String errMessage) {
         PageResponse<T> response = new PageResponse<>();
         response.setSuccess(false);
         response.setCode(errCode);
@@ -133,5 +120,7 @@ public class PageResponse<T> extends Response {
         response.setPageIndex(pageIndex);
         return response;
     }
-
+    public static <T> PageResponse<T> of(Collection<T> data) {
+        return PageResponse.of(data, data.size(), data.size(), 1);
+    }
 }
