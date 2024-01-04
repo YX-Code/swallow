@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-beetlsql</module>
+        <module>common-jedis</module>
+        <module>common-fastjson2</module>
     </modules>
     <dependencies>
         <dependency>

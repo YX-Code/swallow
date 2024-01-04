@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * Response with single record to return
  * <p/>
+ * 
  * @author yaoxing
  */
 public class SingleResponse<T> extends Response {
@@ -15,7 +16,7 @@ public class SingleResponse<T> extends Response {
     /**
      * 请求返回数据
      */
-    private T data;
+    private transient T data;
 
     public T getData() {
         return data;
@@ -24,6 +25,7 @@ public class SingleResponse<T> extends Response {
     public void setData(T data) {
         this.data = data;
     }
+
     public static <T> SingleResponse<T> buildSuccess() {
         SingleResponse<T> response = new SingleResponse<>();
         response.setSuccess(true);
@@ -44,23 +46,13 @@ public class SingleResponse<T> extends Response {
         response.setData(data);
         return response;
     }
-    public static SingleResponse<Object> of(String key, Object value) {
-        SingleResponse<Object> response = new SingleResponse<>();
+
+    public static <T> SingleResponse<Map<String, T>> of(String key, T value) {
+        SingleResponse<Map<String, T>> response = new SingleResponse<>();
         response.setSuccess(true);
-        Map<String, Object> result = new HashMap<>();
+        Map<String, T> result = new HashMap<>();
         result.put(key, value);
         response.setData(result);
         return response;
-    }
-    public SingleResponse<Object> add(String key, Object value) {
-        if (this.getData() == null) {
-            return SingleResponse.of(key, value);
-        }
-        if (this.getData() instanceof Map) {
-            Map<String,Object> mapData = (Map<String,Object>)this.getData();
-            mapData.put(key, value);
-            return (SingleResponse<Object>) this;
-        }
-        throw new IllegalArgumentException("data泛型类型不正确");
     }
 }

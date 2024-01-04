@@ -5,15 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.yxswallow</groupId>
-        <artifactId>swallow-parent</artifactId>
+        <artifactId>swallow-spring</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../swallow-parent/pom.xml</relativePath>
     </parent>
-    <artifactId>swallow-component</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>component-json</module>
-    </modules>
+
+    <artifactId>spring-ioc</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
