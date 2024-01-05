@@ -8,7 +8,7 @@ import lombok.experimental.UtilityClass;
  * @author yaoxing
  */
 @UtilityClass
-public final class StrConstants {
+public final class Str {
     public static final String SPACE = " ";
     public static final String TAB = "	";
     public static final String DOT = ".";
@@ -29,28 +29,6 @@ public final class StrConstants {
     public static final String BRACKET_END = "]";
     public static final String COLON = ":";
     
-    public static final String HTML_NBSP = "&nbsp;";
-    public static final String HTML_AMP = "&amp;";
-    public static final String HTML_QUOTE = "&quot;";
-    public static final String HTML_APOS = "&apos;";
-    public static final String HTML_LT = "&lt;";
-    public static final String HTML_GT = "&gt;";
+
     
-    public static final String JSON_EMPTY = "{}";
-    
-    /**
-     * ISO-8859-1
-     */
-    public static final String ISO_8859_1 = "ISO-8859-1";
-    /**
-     * UTF-8
-     */
-    public static final String UTF_8 = "UTF-8";
-    /**
-     * GBK
-     */
-    public static final String GBK = "GBK";
-    
-    public static final String MYSQL_8_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-    public static final String MYSQL_5_DRIVER_NAME = "com.mysql.jdbc.Driver";
 }

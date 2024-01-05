@@ -15,6 +15,7 @@
         <module>common-beetlsql</module>
         <module>common-jedis</module>
         <module>common-fastjson2</module>
+        <module>common-jackson</module>
     </modules>
     <dependencies>
         <dependency>

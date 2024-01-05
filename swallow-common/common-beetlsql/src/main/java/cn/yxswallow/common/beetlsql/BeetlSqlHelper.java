@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-import static cn.yxswallow.protocols.constants.StrConstants.MYSQL_8_DRIVER_NAME;
+import static cn.yxswallow.protocols.constants.Database.MYSQL_8_DRIVER_NAME;
 
 public class BeetlSqlHelper {
     

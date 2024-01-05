@@ -17,6 +17,19 @@ public abstract class BaseRuntimeException extends RuntimeException {
 
     protected BaseRuntimeException() {
     }
+
+    public BaseRuntimeException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public BaseRuntimeException(Throwable cause) {
+        super(cause);
+    }
+
+    protected BaseRuntimeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
+
     protected BaseRuntimeException(String message) {
         this.message = message;
         this.code = SysError.S0001.name();

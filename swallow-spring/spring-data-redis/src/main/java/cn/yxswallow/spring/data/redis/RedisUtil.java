@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import static cn.yxswallow.protocols.constants.Times.HOUR;
+
 /**
  *
  *
@@ -21,32 +23,8 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class RedisUtil {
 
-    /**
-     *  默认缓存时间 60S
-     */
-    public final static int CAHCETIME = 60;
-    /**
-     *  默认缓存时间 1hr
-     */
-    public final static int CAHCEHOUR = 60 * 60;
-    /**
-     *  默认缓存时间 1Day
-     */
-    public final static int CAHCEDAY = 60 * 60 * 24;
-    /**
-     *  默认缓存时间 1week
-     */
-    public final static int CAHCEWEEK = 60 * 60 * 24 * 7;
-    /**
-     *  默认缓存时间 1month
-     */
-    public final static int CAHCEMONTH = 60 * 60 * 24 * 7 * 30;
-    /**
-     *  默认缓存时间 1年
-     */
-    public final static int CAHCEYEAR = 60 * 60 * 24 * 7 * 30 * 12;
 
-    private static long expiresIn = TimeUnit.SECONDS.toSeconds(CAHCEHOUR * 8);
+    private static long expiresIn = TimeUnit.SECONDS.toSeconds(HOUR * 8);
 
     @Autowired
     private RedisTemplate redisTemplate;

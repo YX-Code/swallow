@@ -25,7 +25,7 @@
         <mysql-connector.version>8.0.27</mysql-connector.version>
         <dubbo.version>3.2.1</dubbo.version>
         <swallow.version>${version}</swallow.version>
-        
+        <lombok.version>1.18.26</lombok.version>
     </properties>
     <dependencies>
         <dependency>

@@ -8,7 +8,7 @@ import lombok.experimental.UtilityClass;
  * @author yaoxing
  */
 @UtilityClass
-public final class BizConstants {
+public final class Biz {
     
     public static final char ENABLE = '1';
     public static final char DISABLE = '0';
@@ -24,9 +24,5 @@ public final class BizConstants {
     public static final String ERROR_MSG = "errorMsg";
     public static final String AUTHORIZATION = "Authorization";
     public static final String BEARER_BLANK = "Bearer ";
-    /**
-     * 默认日期时间格式化For Java
-     */
-    public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
     
 }

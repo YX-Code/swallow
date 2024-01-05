@@ -12,6 +12,18 @@ public class SysException extends BaseRuntimeException {
     public SysException() {
     }
 
+    public SysException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public SysException(Throwable cause) {
+        super(cause);
+    }
+
+    protected SysException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
+
     public SysException(BaseRuntimeException exception) {
         super(exception);
     }
